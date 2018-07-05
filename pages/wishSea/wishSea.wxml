@@ -1,2 +1,82 @@
 <!--pages/wishSea/wishSea.wxml-->
-<text>pages/wishSea/wishSea.wxml</text>
+<scroll-view>
+  <swiper indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style='height:250px'>
+    <block wx:for="{{imgs}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" width="355" height="350"/>
+      </swiper-item>
+    </block>
+  </swiper>
+
+
+  <view class='space'></view>
+  <view class="wishlist">
+    <view>
+      <rich-text nodes="{{nodes}}" ></rich-text>
+    </view>
+    <view class='space'></view>
+    <view>
+      <rich-text nodes="{{nodesa}}" ></rich-text>
+    </view>
+    <view class='space'></view>
+    <view class='gainsboro'>
+      <textarea maxlength='240' style='height:3' value='心愿内容'></textarea>
+    </view>
+    <view class='space'></view>
+    <view>
+      <button size='mini'>点赞</button>
+      <button size='mini'>收藏</button>
+    </view>
+  </view>
+
+  <view class='space'></view>
+  <view class='space'></view>
+  <view class='space'></view>
+  <view class="wishlist">
+    <view>
+      <rich-text nodes="{{nodes}}" ></rich-text>
+    </view>
+    <view class='space'></view>
+    <view>
+      <rich-text nodes="{{nodesa}}" ></rich-text>
+    </view>
+    <view class='space'></view>
+    <view class='gainsboro'>
+      <textarea maxlength='240' style='height:3' value='心愿内容'></textarea>
+    </view>
+    <view class='space'></view>
+    <view>
+      <button size='mini'>点赞</button>
+      <button size='mini'>收藏</button>
+    </view>
+  </view>
+
+  <view class='space'></view>
+  <view class='space'></view>
+  <view class='space'></view>
+  <view class="wishlist">
+    <view>
+      <rich-text nodes="{{nodes}}" ></rich-text>
+    </view>
+    <view class='space'></view>
+    <view>
+      <rich-text nodes="{{nodesa}}" ></rich-text>
+    </view>
+    <view class='space'></view>
+    <view class='gainsboro'>
+      <textarea maxlength='240' style='height:3' value='心愿内容'></textarea>
+    </view>
+    <view class='space'></view>
+    <view>
+      <button size='mini'>点赞</button>
+      <button size='mini'>收藏</button>
+    </view>
+    <view class='space'></view>
+    <view class='space'></view>
+  </view>
+
+  
+</scroll-view>
+
+   

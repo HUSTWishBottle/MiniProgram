@@ -1,5 +1,5 @@
 <!--pages/signup/signup.wxml-->
-<view class='container'>
+<view class='container' style="background-image: url('../../images/background2.jpg')">
   <form>
     <view class='space'></view>
     <view class='row'>
@@ -19,5 +19,6 @@
     <view class='row'>
       <button type='primary' form-type='submit' bindtap='mainPage'>注册</button>
     </view>
+    <view class='space2'></view>
   </form>
 </view>

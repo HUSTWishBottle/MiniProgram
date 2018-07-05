@@ -1,9 +1,9 @@
 {
   "pages":[
+    "pages/login/login",
     "pages/index/index",
     "pages/logs/logs",
     "pages/mainPage/mainPage",
-    "pages/login/login",
     "pages/wishSea/wishSea",
     "pages/signup/signup",
     "pages/tree/tree"
@@ -20,25 +20,25 @@
     "downloadFile": 10000
   },
   "tabBar": {
-    "color": "#11cd6e",
-    "selectedColor": "blue",
+    "color": "#8a8a8a",
+    "selectedColor": "#1296db",
     "borderStyle": "white",
     "list": [
       {
-        "selectedIconPath": "images/首页.png",
-        "iconPath": "images/首页1.png",
+        "selectedIconPath": "images/首页1.png",
+        "iconPath": "images/首页2.png",
         "pagePath":"pages/mainPage/mainPage",
         "text": "首页"
       },
       {
-        "selectedIconPath": "images/树洞.png",
-        "iconPath": "images/树洞1.png",
+        "selectedIconPath": "images/树洞1.png",
+        "iconPath": "images/树洞2.png",
         "pagePath":"pages/tree/tree",
         "text": "树洞"
       },
       {
-        "selectedIconPath": "images/心愿海.png",
-        "iconPath": "images/心愿海1.png",
+        "selectedIconPath": "images/心愿海1.png",
+        "iconPath": "images/心愿海2.png",
         "pagePath": "pages/wishSea/wishSea",
         "text": "心愿海"
       }

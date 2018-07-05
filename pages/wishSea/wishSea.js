@@ -5,8 +5,39 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    imgs: [
+      '../../images/background1.jpg',
+      '../../images/background2.jpg',
+      '../../images/background3.jpg',
+    ],
+    indicatorDots: false,
+    autoplay: true,
+    interval: 5000,
+    duration: 1000,
+    nodes: [{
+      name: 'div',
+      attrs: {
+        class: 'div_class',
+        style: 'line-height: 20px;color:red;font-size:20pt;'
+      },
+      children: [{
+        type: 'text',
+        text: '作者'
+      }]
+    }],
+    nodesa: [{
+      name: 'div',
+      attrs: {
+        class: 'div_class',
+        style: 'line-height: 15px;color:gold;font-size:15pt;'
+      },
+      children: [{
+        type: 'text',
+        text: '标题'
+      }]
+    }]
   },
+
 
   /**
    * 生命周期函数--监听页面加载

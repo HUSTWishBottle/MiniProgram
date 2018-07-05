@@ -1,1 +1,16 @@
 /* pages/wishSea/wishSea.wxss */
+.space{
+  margin-top: 15px;
+}
+
+.wishlist{
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.gainsboro{
+    background-color: gainsboro;
+}
+.link{
+  color: grey;
+  display: inline-table;
+}

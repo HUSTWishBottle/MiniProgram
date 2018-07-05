@@ -12,6 +12,10 @@
   margin-top: 60px;
 }
 
+.space2{
+  margin-top: 118px;
+}
+
 .row{
   display: flex;
   align-items: center;
