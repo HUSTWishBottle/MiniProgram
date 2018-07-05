@@ -1,0 +1,75 @@
+<!--pages/tree/tree.wxml-->
+<scroll-view>
+  <view class='grey'>
+    <view class='container'>
+      <rich-text nodes="{{a}}" ></rich-text>
+    </view>
+    <swiper indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{wishes}}">
+        <swiper-item>
+          <view class='row'>
+          <text>标题：</text>
+          <input type='text' name="title" placeholder='{{item.title}}'/>
+        </view>
+        <view class='row'>
+          <text>内容：</text>
+          <input type='message' name="concent" placeholder='{{item.concent}}'/>
+        </view>
+        <view>
+          <navigator class='link'>编辑</navigator> | <navigator class='link'>删除</navigator>
+        </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view>
+    <view class='container'>
+      <rich-text nodes="{{b}}" ></rich-text>
+    </view>
+    <swiper indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{wishes}}">
+        <swiper-item>
+          <view class='row'>
+          <text>标题：</text>
+          <input type='text' name="title" placeholder='{{item.title}}'/>
+        </view>
+        <view class='row'>
+          <text>内容：</text>
+          <input type='message' name="concent" placeholder='{{item.concent}}'/>
+        </view>
+        <view>
+          <navigator class='link'>撤回</navigator>
+        </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  
+  <view class='grey'>
+    <view class='container'>
+      <rich-text nodes="{{c}}" ></rich-text>
+    </view>
+    <swiper indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{wishes}}">
+        <swiper-item>
+          <view class='row'>
+          <text>标题：</text>
+          <input type='text' name="title" placeholder='{{item.title}}'/>
+        </view>
+        <view class='row'>
+          <text>内容：</text>
+          <input type='message' name="concent" placeholder='{{item.concent}}'/>
+        </view>
+        <view>
+          <navigator class='link'>取消收藏</navigator>
+        </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  
+</scroll-view>

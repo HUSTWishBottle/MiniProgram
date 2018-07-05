@@ -1,0 +1,23 @@
+<!--pages/signup/signup.wxml-->
+<view class='container'>
+  <form>
+    <view class='space'></view>
+    <view class='row'>
+      <text>昵称：</text>
+      <input type='text' name="nickName" placeholder='nickName'/>
+    </view>
+    <view class='row'>
+      <text>账号：</text>
+      <input type='text' name="name" placeholder='email'/>
+    </view>
+    <view class='row'>
+      <text>密码：</text>
+      <input type='password' name="password" placeholder='password'/>
+    </view>
+    <view class='space1'></view>
+    <navigator class='link' url='../login/login'>返回登录界面</navigator>
+    <view class='row'>
+      <button type='primary' form-type='submit' bindtap='mainPage'>注册</button>
+    </view>
+  </form>
+</view>

@@ -1,0 +1,32 @@
+<scroll-view>
+  <swiper indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" width="355" height="150"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='container'> 
+    <view class='src'>
+      <image src='../../images/user1.png' class="userinfo-avatar" mode="cover"/>
+    </view>
+    <view>
+      <rich-text nodes="{{nodes}}" ></rich-text>
+    </view>
+    <view class='space'></view>
+    <view class='row'>
+      <text>账号：</text>
+      <input type='text' name="name" placeholder='email'/>
+    </view>
+    <view class='row'>
+      <text>生日：</text>
+      <input type='number' name="birthday" placeholder='birthday'/>
+      <view class='space'></view>
+    </view>
+
+    
+    
+
+  </view>
+</scroll-view>

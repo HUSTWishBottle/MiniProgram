@@ -1,0 +1,48 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/mainPage/mainPage",
+    "pages/login/login",
+    "pages/wishSea/wishSea",
+    "pages/signup/signup",
+    "pages/tree/tree"
+  ],
+  "window":{
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#26A5FF",
+    "navigationBarTitleText": "心愿瓶",
+    "navigationBarTextStyle": "white"
+  },
+
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "tabBar": {
+    "color": "#11cd6e",
+    "selectedColor": "blue",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/首页.png",
+        "iconPath": "images/首页1.png",
+        "pagePath":"pages/mainPage/mainPage",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/树洞.png",
+        "iconPath": "images/树洞1.png",
+        "pagePath":"pages/tree/tree",
+        "text": "树洞"
+      },
+      {
+        "selectedIconPath": "images/心愿海.png",
+        "iconPath": "images/心愿海1.png",
+        "pagePath": "pages/wishSea/wishSea",
+        "text": "心愿海"
+      }
+    ]
+  },
+  "debug": true
+}
