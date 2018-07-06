@@ -27,6 +27,7 @@
     <view>
       <button size='mini'>点赞</button>
       <button size='mini'>收藏</button>
+      <button size='mini'>评论</button>
     </view>
   </view>
 

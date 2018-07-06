@@ -17,7 +17,7 @@
     <view class='space1'></view>
     <navigator class='link' url='../login/login'>返回登录界面</navigator>
     <view class='row'>
-      <button type='primary' form-type='submit' bindtap='mainPage'>注册</button>
+      <button class='btn' hover-class='btn_hover' bindtap='mainPage'>注册</button>
     </view>
     <view class='space2'></view>
   </form>

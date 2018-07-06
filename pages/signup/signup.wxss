@@ -9,11 +9,11 @@
 }
 
 .space1{
-  margin-top: 60px;
+  margin-top: 30px;
 }
 
 .space2{
-  margin-top: 118px;
+  margin-top: 148px;
 }
 
 .row{
@@ -46,4 +46,15 @@
   margin-left: 50px;
   color: blue;
   display: inline-table;
+}
+
+.btn {
+  width: 90%;
+  margin-top: 10rpx;
+  background-color: #FFCC00;
+  color: #FFF;
+}
+
+.btn_hover {
+  background-color: pink;
 }

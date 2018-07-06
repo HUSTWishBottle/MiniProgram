@@ -1,75 +1,63 @@
-<!--pages/tree/tree.wxml-->
+<!--pages/wishSea/wishSea.wxml-->
 <scroll-view>
-  <view class='grey'>
-    <view class='container'>
-      <rich-text nodes="{{a}}" ></rich-text>
+  <view class='space'></view>
+  <view class="wishlist">
+    <view>
+      <rich-text nodes="{{nodes}}" ></rich-text>
     </view>
-    <swiper indicator-dots="{{indicatorDots}}"
-    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-      <block wx:for="{{wishes}}">
-        <swiper-item>
-          <view class='row'>
-          <text>标题：</text>
-          <input type='text' name="title" placeholder='{{item.title}}'/>
-        </view>
-        <view class='row'>
-          <text>内容：</text>
-          <input type='message' name="concent" placeholder='{{item.concent}}'/>
-        </view>
-        <view>
-          <navigator class='link'>编辑</navigator> | <navigator class='link'>删除</navigator>
-        </view>
-        </swiper-item>
-      </block>
-    </swiper>
+
+    <view class='space'></view>
+    <view class='gainsboro'>
+      <textarea maxlength='240' style='height:3' value='心愿内容'></textarea>
+    </view>
+    <view class='space'></view>
+    <view>
+      <text decode='{{true}}'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
+      <button size='mini' class='fabu-btn' hover-class='f_btn_hover'>发布</button>
+      <text decode='{{true}}'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
+      <button size='mini' class='delete-btn' hover-class='d_btn_hover'>删除</button>
+    </view>
   </view>
 
-  <view>
-    <view class='container'>
-      <rich-text nodes="{{b}}" ></rich-text>
+  <view class='space'></view>
+  <view class="wishlist">
+    <view>
+      <rich-text nodes="{{nodes}}" ></rich-text>
     </view>
-    <swiper indicator-dots="{{indicatorDots}}"
-    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-      <block wx:for="{{wishes}}">
-        <swiper-item>
-          <view class='row'>
-          <text>标题：</text>
-          <input type='text' name="title" placeholder='{{item.title}}'/>
-        </view>
-        <view class='row'>
-          <text>内容：</text>
-          <input type='message' name="concent" placeholder='{{item.concent}}'/>
-        </view>
-        <view>
-          <navigator class='link'>撤回</navigator>
-        </view>
-        </swiper-item>
-      </block>
-    </swiper>
-  </view>
-  
-  <view class='grey'>
-    <view class='container'>
-      <rich-text nodes="{{c}}" ></rich-text>
+
+    <view class='space'></view>
+    <view class='gainsboro'>
+      <textarea maxlength='240' style='height:3' value='心愿内容'></textarea>
     </view>
-    <swiper indicator-dots="{{indicatorDots}}"
-    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-      <block wx:for="{{wishes}}">
-        <swiper-item>
-          <view class='row'>
-          <text>标题：</text>
-          <input type='text' name="title" placeholder='{{item.title}}'/>
-        </view>
-        <view class='row'>
-          <text>内容：</text>
-          <input type='message' name="concent" placeholder='{{item.concent}}'/>
-        </view>
-        <view>
-          <navigator class='link'>取消收藏</navigator>
-        </view>
-        </swiper-item>
-      </block>
-    </swiper>
+    <view class='space'></view>
+    <view>
+      <text decode='{{true}}'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
+      <button size='mini' class='fabu-btn' hover-class='f_btn_hover'>发布</button>
+      <text decode='{{true}}'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
+      <button size='mini' class='delete-btn' hover-class='d_btn_hover'>删除</button>
+    </view>
   </view>
+
+  <view class='space'></view>
+  <view class="wishlist">
+    <view>
+      <rich-text nodes="{{nodes}}" ></rich-text>
+    </view>
+
+    <view class='space'></view>
+    <view class='gainsboro'>
+      <textarea maxlength='240' style='height:3' value='心愿内容'></textarea>
+    </view>
+    <view class='space'></view>
+    <view>
+      <text decode='{{true}}'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
+      <button size='mini' class='fabu-btn' hover-class='f_btn_hover'>发布</button>
+      <text decode='{{true}}'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
+      <button size='mini' class='delete-btn' hover-class='d_btn_hover'>删除</button>
+    </view>
+  </view>
+
   
 </scroll-view>
+
+   

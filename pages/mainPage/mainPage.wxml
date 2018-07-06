@@ -26,7 +26,7 @@
     </view>
     <view class='space'></view>
     <view>
-      <button type='warn' bindtap='zhuxiao'>注销</button>
+      <button type='warn' size='mini' bindtap='zhuxiao'>注销</button>
     </view>
   </view>
 </scroll-view>
