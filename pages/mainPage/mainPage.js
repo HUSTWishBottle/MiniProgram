@@ -27,4 +27,26 @@ Page({
       url: '../login/login',
     })
   },
+  shoucang: function () {
+    console.log("进入我的收藏")
+    wx.navigateTo({
+      url: '../collocation/collocation',
+    })
+  },
+  onShareAppMessage: function (res) {
+    var that = this;
+    return {
+      title: '',
+      path: '/pages/mainPage/mainPage?id=' + that.data.scratchId,
+      success: function (res) {
+        // 转发成功
+
+        that.shareClick();
+      },
+      fail: function (res) {
+        // 转发失败
+      }
+    }
+  }
 })
+  

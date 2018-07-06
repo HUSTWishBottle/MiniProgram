@@ -1,4 +1,4 @@
-<scroll-view>
+<scroll-view  style="background-image: url('../../images/background7.jpeg')">
   <swiper indicator-dots="{{indicatorDots}}"
     autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
     <block wx:for="{{imgUrls}}">
@@ -25,8 +25,12 @@
       <view class='space'></view>
     </view>
     <view class='space'></view>
+    <view class='space'></view>
     <view>
-      <button type='warn' size='mini' bindtap='zhuxiao'>注销</button>
+      <button type='primary' size='mini' bindtap='shoucang'>我的收藏</button>
+      <text decode='{{true}}'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
+      <button type='warn' size='mini' bindtap='zhuxiao'>退出登录</button>
     </view>
+    <view class='space'></view>
   </view>
 </scroll-view>

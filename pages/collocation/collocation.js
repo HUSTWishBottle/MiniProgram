@@ -1,10 +1,21 @@
-// pages/wishSea/wishSea.js
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    nodesb: [{
+      name: 'div',
+      attrs: {
+        class: 'div_class',
+        style: 'line-height: 0px;color:white;font-size:30pt;'
+      },
+      children: [{
+        type: 'text',
+        text: '我的收藏'
+      }]
+    }],
     nodes: [{
       name: 'div',
       attrs: {
@@ -20,30 +31,15 @@ Page({
       name: 'div',
       attrs: {
         class: 'div_class',
-        style: 'line-height: 30px;color:gold;font-size:30pt;'
+        style: 'line-height: 15px;color:gold;font-size:15pt;'
       },
       children: [{
         type: 'text',
-        text: '我的心愿'
+        text: '作者'
       }]
-    }],
-  },  
-  //右上角分享功能
-  onShareAppMessage: function (res) {
-    var that = this;
-    return {
-      title: '',
-      path: '/pages/tree/tree?id=' + that.data.scratchId,
-      success: function (res) {
-        // 转发成功
-
-        that.shareClick();
-      },
-      fail: function (res) {
-        // 转发失败
-      }
-    }
+    }]
   },
+
 
   /**
    * 生命周期函数--监听页面加载

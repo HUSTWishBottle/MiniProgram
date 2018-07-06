@@ -1,6 +1,8 @@
 <!--pages/wishSea/wishSea.wxml-->
-<scroll-view>
-  <view class='space'></view>
+<scroll-view  style="background-image: url('../../images/background3.jpg')">
+  <view class='container'>
+    <rich-text nodes="{{nodesa}}" ></rich-text>
+  </view>
   <view class="wishlist">
     <view>
       <rich-text nodes="{{nodes}}" ></rich-text>

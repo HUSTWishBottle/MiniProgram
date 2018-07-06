@@ -6,7 +6,8 @@
     "pages/mainPage/mainPage",
     "pages/wishSea/wishSea",
     "pages/signup/signup",
-    "pages/tree/tree"
+    "pages/tree/tree",
+    "pages/collocation/collocation"
   ],
   "window":{
     "backgroundTextStyle": "light",

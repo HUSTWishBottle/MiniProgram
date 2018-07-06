@@ -5,15 +5,17 @@ Page({
    * 页面的初始数据
    */
   data: {
-    imgs: [
-      '../../images/background1.jpg',
-      '../../images/background2.jpg',
-      '../../images/background3.jpg',
-    ],
-    indicatorDots: false,
-    autoplay: true,
-    interval: 5000,
-    duration: 1000,
+    nodesb: [{
+      name: 'div',
+      attrs: {
+        class: 'div_class',
+        style: 'line-height: 30px;color:white;font-size:30pt;'
+      },
+      children: [{
+        type: 'text',
+        text: '心愿海'
+      }]
+    }],
     nodes: [{
       name: 'div',
       attrs: {
@@ -22,7 +24,7 @@ Page({
       },
       children: [{
         type: 'text',
-        text: '作者'
+        text: '标题'
       }]
     }],
     nodesa: [{
@@ -33,7 +35,7 @@ Page({
       },
       children: [{
         type: 'text',
-        text: '标题'
+        text: '作者'
       }]
     }]
   },

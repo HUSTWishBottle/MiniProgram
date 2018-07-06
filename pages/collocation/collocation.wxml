@@ -1,5 +1,4 @@
-<!--pages/wishSea/wishSea.wxml-->
-<scroll-view  style="background-image: url('../../images/background6.jpg')">
+<scroll-view  style="background-image: url('../../images/background4.jpg')">
   <view class='container'>
     <rich-text nodes="{{nodesb}}" ></rich-text>
   </view>
@@ -18,9 +17,7 @@
     </view>
     <view class='space'></view>
     <view>
-      <button size='mini'>点赞</button>
-      <button size='mini'>收藏</button>
-      <button size='mini'>评论</button>
+      <button size='mini'>取消收藏</button>
     </view>
   </view>
 
@@ -41,9 +38,7 @@
     </view>
     <view class='space'></view>
     <view>
-      <button size='mini'>点赞</button>
-      <button size='mini'>收藏</button>
-      <button size='mini'>评论</button>
+      <button size='mini'>取消收藏</button>
     </view>
   </view>
 
@@ -64,9 +59,7 @@
     </view>
     <view class='space'></view>
     <view>
-      <button size='mini'>点赞</button>
-      <button size='mini'>收藏</button>
-      <button size='mini'>评论</button>
+      <button size='mini'>取消收藏</button>
     </view>
     <view class='space'></view>
     <view class='space'></view>
@@ -74,5 +67,3 @@
 
   
 </scroll-view>
-
-   
