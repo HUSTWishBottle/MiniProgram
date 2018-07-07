@@ -104,15 +104,6 @@ Page({
       time: time
     });*/
   },
-showTime:function(e){
-  console.log(e)
-  // 调用函数时，传入new Date()参数，返回值是日期和时间  
-  var time = util.formatTime(new Date());
-  // 再通过setData更改Page()里面的data，动态更新页面的数据  
-  this.setData({
-    time: time
-  });
-},
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -131,7 +122,7 @@ showTime:function(e){
       data: {}, //是否有数据传到服务器
       success: function(res) {
         var listData = res.data.mywishList;
-       // console.log(listData)
+       console.log(listData)
         if (listData == null) {
           var toastText = "返回数据失败" + res.data.errMsg;
           wx.showToast({

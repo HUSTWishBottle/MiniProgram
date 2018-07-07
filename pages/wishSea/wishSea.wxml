@@ -8,26 +8,36 @@
   <block wx:for="{{list}}">
     <view class="wishlist">
       <view class='space'></view>
-      <view class='row'>
-        <text>标题：</text>
-        <rich-text nodes="{{item.title}}"></rich-text>
+      <view >
+        <rich-text style='line-height: 20px;color:red;font-size:20pt;'>标题：{{item.title}}</rich-text>
       </view>
       <view class='space'></view>
-      <view class='row'>
-        <text>作者：</text>
-        <rich-text nodes="{{item.accountInfo.nikeName}}"></rich-text>
+      <view>
+        <rich-text style='line-height: 15px;color:gold;font-size:15pt;'>作者：{{item.accountInfo.nikeName}}</rich-text> 
       </view>
       <view class='space'></view>
 
-      <view>内容：</view>
+      <view>
+        <rich-text style='line-height: 15px;color:green;font-size:15pt;'>内容：</rich-text> 
+      </view>
       <view class='box'>
         <textarea maxlength='240' style='height:3' value='{{item.content}}'></textarea>
       </view>
       <view class='space'></view>
       <view>
-        <button size='mini'>点赞</button>
-        <button size='mini'>收藏</button>
-        <button size='mini'>评论</button>
+        <button style='background-color:{{color}}' size='mini' bindtap='dianzan'>点赞</button>
+        <button style='background-color:{{colors}}' size='mini' bindtap='shoucang'>收藏</button>
+        <!--button size='mini' >评论</button-->
+        <button size='mini' bindtap="choiceItem" data-item="3" data-wishID='{{item.wishID}}' class="chioce-item chioce-item-last" hover-class="click-once-opaque">评论 </button>
+        <view class="filter-list{{!chioceFilter?' chioce-list-hide':' chioce-list-show'}}">
+          <view wx:for="{{commentList}}" data-index="{{index}}" class="filter-item">{{item.accountInfo.nikeName}}
+            <text>评论：</text>{{item.cmcontent}}
+
+          </view>
+          <view class="filter-footer">
+            <button catchtap="filterButtonClick" class="button-submit" type="primary" size="mini">确定</button>
+          </view>
+        </view>
       </view>
     </view>
   </block>

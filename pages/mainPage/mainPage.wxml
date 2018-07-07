@@ -12,11 +12,11 @@
         <image src="{{item.avatar}}" class="userinfo-avatar" mode="cover" />
       </view>
       <view>
-        <rich-text nodes="{{item.nikeName}}"></rich-text>
+        <rich-text style='line-height: 20px;color:red;font-size:20pt;'>{{item.nikeName}}</rich-text>
       </view>
     </view>
     <view class='space'></view>
-    <view>
+    <view class='cent'>
       <view class='row'>
         <text>生日：</text>
         <text name="emai">{{item.email}}</text>

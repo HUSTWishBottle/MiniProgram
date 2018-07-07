@@ -5,7 +5,20 @@ Page({
    * 页面的初始数据
    */
   data: {
-    list:[],
+    list: [],
+    color:[],
+    colors: [],
+    commentList:[],
+    chioceFilter: false,
+    filterList: [{ key: 1, value: "周日营业", selected: false }, {
+      key: 2, value: "官方假期营业（香港）", selected: false
+    }, {
+      key: 3, value: "可为儿童接种疫苗", selected: false
+    }, {
+      key: 4, value: "网上付款", selected: false
+    }, {
+      key: 5, value: "到诊所现场付款", selected: false
+    }],
     nodesb: [{
       name: 'div',
       attrs: {
@@ -40,32 +53,73 @@ Page({
       }]
     }]
   },
-
-
+  choiceItem: function(e) {
+    //console.log(e)
+    var that = this;
+    //console.log(this.data.chioceFilter)
+    //console.log(e.currentTarget.dataset.item)
+    if (e.currentTarget.dataset.item == "3")
+      if (this.data.chioceFilter) {
+        //返回list
+       // console.log(e)
+        wx.request({
+          url: 'http://localhost:8080/weChatgetComment/' + e.target.dataset.wishid,
+          data: {},
+          method: "GET",
+          success: function (res) {
+            console.log(res.data.commentsList)
+            that.setData({
+              chioceFilter: false,
+              commentList: res.data.commentsList,
+            });
+          }
+        })
+      }
+    else {
+        wx.request({
+          url: 'http://localhost:8080/weChatgetComment/' + e.target.dataset.wishid,
+          data: {},
+          method: "GET",
+          success: function (res) {
+            console.log(res.data.commentsList)
+            that.setData({
+              chioceFilter: false,
+              commentList: res.data.commentsList,
+            });
+          }
+        })
+    }
+  },
+  //确认
+  filterButtonClick: function () {
+    this.setData({
+      chioceFilter: false,
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-  
+  onLoad: function(options) {
+
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
-  
+  onReady: function() {
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
     var that = this;
     wx.request({
       url: 'http://localhost:8080/PublicWish/', //请求的URL地址
       method: "GET", //请求方式
-      data: {},  //是否有数据传到服务器
-      success: function (res) {
+      data: {}, //是否有数据传到服务器
+      success: function(res) {
         var listData = res.data.publicWishList;
         console.log(listData)
         if (listData == null) {
@@ -75,50 +129,79 @@ Page({
             icon: "",
             duration: 2000
           });
-        }
-        else {
+        } else {
           that.setData({
             list: listData
           })
         }
       }
     })
-      //console.log(list)  
-  
+    //console.log(list)  
+
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
-  
+  onHide: function() {
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
-  
+  onUnload: function() {
+
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
-  
+  onPullDownRefresh: function() {
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
-  
+  onReachBottom: function() {
+
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-  
+  onShareAppMessage: function() {
+
+  },
+
+  dianzan:function(e){
+    var that=this;
+    
+    if(that.data.color!="yellow"){
+      that.setData({
+        color: "yellow",
+      })
+    }
+    else{
+      that.setData({
+        color:"white"
+      })
+    }
+  },
+
+  shoucang: function (e) {
+    var that = this;
+
+    if (that.data.colors != "green") {
+      that.setData({
+        colors: "green",
+      })
+    }
+    else {
+      that.setData({
+        colors: "white"
+      })
+    }
   }
 })

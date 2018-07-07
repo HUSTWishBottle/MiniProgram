@@ -4,26 +4,30 @@
     <rich-text nodes="{{nodesa}}"></rich-text>
   </view>
 
-  <view class="wishlist">
-    <block wx:for="{{list}}">
-      <view class='row'>
-        <!--rich-text nodes="{{nodes}}"></rich-text-->
-        <view>标题：</view>
-        <rich-text nodes=" {{item.title}}"></rich-text>
+  <view class='line'></view>
+
+  <block wx:for="{{list}}">
+    <view class='line'></view>
+    <view class="wishlist">
+      <view class='space'></view>
+      <view>
+        <rich-text style='line-height: 20px;color:red;font-size:20pt;'>标题：{{item.title}}</rich-text>
       </view>
 
       <view class='space'></view>
       <view>
-        <text>内容：</text>
+        <rich-text style='line-height: 15px;color:green;font-size:15pt;'>内容：</rich-text>
       </view>
       <view class='box'>
         <textarea maxlength='240' style='height:3' value='{{item.content}}'></textarea><!--心愿内容-->
       </view>
       <view class='space'></view>
       <view>
-        <text decode='{{true}}'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
-        <!--text >{{item.relTime.toString().substring(0,10)}}</text-->
-           <text  data-time='{{item.relTime}}' >{{time}}</text>
+        <text decode='{{true}}'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
+        <text decode='{{true}}'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
+        <text>时间：</text>
+        <wxs module="showTime" src="../../utils/showTime.wxs"></wxs>
+           <text>{{showTime.timetoStr(item.relTime)}}</text>
       </view>
       <view class='space'></view>
       <view>
@@ -31,8 +35,8 @@
         <text decode='{{true}}'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
         <button size='mini' class='delete-btn' bindtap='deleteWish' data-wishID='{{item.wishID}}' data-title='{{item.title}}' hover-class='d_btn_hover'>删除</button>
       </view>
-    </block>
-  </view>
+    </view>
+  </block>
   <view class="round-click">
     <navigator url='/pages/addwish/addwish'>添加心愿</navigator>
   </view>
