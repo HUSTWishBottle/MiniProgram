@@ -1,65 +1,41 @@
 <!--pages/wishSea/wishSea.wxml-->
-<scroll-view  style="background-image: url('../../images/background3.jpg')">
+<scroll-view style="background-image: url('../../images/background8.jpg')">
   <view class='container'>
-    <rich-text nodes="{{nodesa}}" ></rich-text>
+    <rich-text nodes="{{nodesa}}"></rich-text>
   </view>
+
   <view class="wishlist">
-    <view>
-      <rich-text nodes="{{nodes}}" ></rich-text>
-    </view>
+    <block wx:for="{{list}}">
+      <view class='row'>
+        <!--rich-text nodes="{{nodes}}"></rich-text-->
+        <view>标题：</view>
+        <rich-text nodes=" {{item.title}}"></rich-text>
+      </view>
 
-    <view class='space'></view>
-    <view class='gainsboro'>
-      <textarea maxlength='240' style='height:3' value='心愿内容'></textarea>
-    </view>
-    <view class='space'></view>
-    <view>
-      <text decode='{{true}}'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
-      <button size='mini' class='fabu-btn' hover-class='f_btn_hover'>发布</button>
-      <text decode='{{true}}'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
-      <button size='mini' class='delete-btn' hover-class='d_btn_hover'>删除</button>
-    </view>
+      <view class='space'></view>
+      <view>
+        <text>内容：</text>
+      </view>
+      <view class='box'>
+        <textarea maxlength='240' style='height:3' value='{{item.content}}'></textarea><!--心愿内容-->
+      </view>
+      <view class='space'></view>
+      <view>
+        <text decode='{{true}}'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
+        <!--text >{{item.relTime.toString().substring(0,10)}}</text-->
+           <text  data-time='{{item.relTime}}' >{{time}}</text>
+      </view>
+      <view class='space'></view>
+      <view>
+        <text decode='{{true}}'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
+        <text decode='{{true}}'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
+        <button size='mini' class='delete-btn' bindtap='deleteWish' data-wishID='{{item.wishID}}' data-title='{{item.title}}' hover-class='d_btn_hover'>删除</button>
+      </view>
+    </block>
+  </view>
+  <view class="round-click">
+    <navigator url='/pages/addwish/addwish'>添加心愿</navigator>
   </view>
 
-  <view class='space'></view>
-  <view class="wishlist">
-    <view>
-      <rich-text nodes="{{nodes}}" ></rich-text>
-    </view>
 
-    <view class='space'></view>
-    <view class='gainsboro'>
-      <textarea maxlength='240' style='height:3' value='心愿内容'></textarea>
-    </view>
-    <view class='space'></view>
-    <view>
-      <text decode='{{true}}'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
-      <button size='mini' class='fabu-btn' hover-class='f_btn_hover'>发布</button>
-      <text decode='{{true}}'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
-      <button size='mini' class='delete-btn' hover-class='d_btn_hover'>删除</button>
-    </view>
-  </view>
-
-  <view class='space'></view>
-  <view class="wishlist">
-    <view>
-      <rich-text nodes="{{nodes}}" ></rich-text>
-    </view>
-
-    <view class='space'></view>
-    <view class='gainsboro'>
-      <textarea maxlength='240' style='height:3' value='心愿内容'></textarea>
-    </view>
-    <view class='space'></view>
-    <view>
-      <text decode='{{true}}'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
-      <button size='mini' class='fabu-btn' hover-class='f_btn_hover'>发布</button>
-      <text decode='{{true}}'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
-      <button size='mini' class='delete-btn' hover-class='d_btn_hover'>删除</button>
-    </view>
-  </view>
-
-  
 </scroll-view>
-
-   

@@ -1,0 +1,14 @@
+<!--pages/mycl/mycl.wxml-->
+<block wx:for="{{collection}}">
+<view>
+  <view>
+    <text>标题：</text><text>{{item.collection.wish.title}}</text>
+  </view>
+  <view class='line'></view>
+  <view>
+    <text>内容：</text>
+    <textarea placeholder='concent' maxlength='240' >{{item.collection.wish.content}}</textarea>
+  </view>
+  <view class='line'></view>
+</view>
+</block>

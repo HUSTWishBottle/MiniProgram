@@ -1,78 +1,35 @@
 <!--pages/wishSea/wishSea.wxml-->
-<scroll-view  style="background-image: url('../../images/background6.jpg')">
+<scroll-view style="background-image: url('../../images/background6.jpg')">
   <view class='container'>
-    <rich-text nodes="{{nodesb}}" ></rich-text>
+    <rich-text nodes="{{nodesb}}"></rich-text>
   </view>
   <view class='space'></view>
-  <view class="wishlist">
-    <view>
-      <rich-text nodes="{{nodes}}" ></rich-text>
-    </view>
-    <view class='space'></view>
-    <view>
-      <rich-text nodes="{{nodesa}}" ></rich-text>
-    </view>
-    <view class='space'></view>
-    <view class='gainsboro'>
-      <textarea maxlength='240' style='height:3' value='心愿内容'></textarea>
-    </view>
-    <view class='space'></view>
-    <view>
-      <button size='mini'>点赞</button>
-      <button size='mini'>收藏</button>
-      <button size='mini'>评论</button>
-    </view>
-  </view>
 
-  <view class='space'></view>
-  <view class='space'></view>
-  <view class='space'></view>
-  <view class="wishlist">
-    <view>
-      <rich-text nodes="{{nodes}}" ></rich-text>
-    </view>
-    <view class='space'></view>
-    <view>
-      <rich-text nodes="{{nodesa}}" ></rich-text>
-    </view>
-    <view class='space'></view>
-    <view class='gainsboro'>
-      <textarea maxlength='240' style='height:3' value='心愿内容'></textarea>
-    </view>
-    <view class='space'></view>
-    <view>
-      <button size='mini'>点赞</button>
-      <button size='mini'>收藏</button>
-      <button size='mini'>评论</button>
-    </view>
-  </view>
+  <block wx:for="{{list}}">
+    <view class="wishlist">
+      <view class='space'></view>
+      <view class='row'>
+        <text>标题：</text>
+        <rich-text nodes="{{item.title}}"></rich-text>
+      </view>
+      <view class='space'></view>
+      <view class='row'>
+        <text>作者：</text>
+        <rich-text nodes="{{item.accountInfo.nikeName}}"></rich-text>
+      </view>
+      <view class='space'></view>
 
-  <view class='space'></view>
-  <view class='space'></view>
-  <view class='space'></view>
-  <view class="wishlist">
-    <view>
-      <rich-text nodes="{{nodes}}" ></rich-text>
+      <view>内容：</view>
+      <view class='box'>
+        <textarea maxlength='240' style='height:3' value='{{item.content}}'></textarea>
+      </view>
+      <view class='space'></view>
+      <view>
+        <button size='mini'>点赞</button>
+        <button size='mini'>收藏</button>
+        <button size='mini'>评论</button>
+      </view>
     </view>
-    <view class='space'></view>
-    <view>
-      <rich-text nodes="{{nodesa}}" ></rich-text>
-    </view>
-    <view class='space'></view>
-    <view class='gainsboro'>
-      <textarea maxlength='240' style='height:3' value='心愿内容'></textarea>
-    </view>
-    <view class='space'></view>
-    <view>
-      <button size='mini'>点赞</button>
-      <button size='mini'>收藏</button>
-      <button size='mini'>评论</button>
-    </view>
-    <view class='space'></view>
-    <view class='space'></view>
-  </view>
+  </block>
 
-  
 </scroll-view>
-
-   

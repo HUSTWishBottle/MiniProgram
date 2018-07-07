@@ -1,0 +1,24 @@
+<view>
+  <form bindsubmit='frmAddwish'>
+    <view>
+      <text>标题：</text>
+      <input type='text' name='title' placeholder='title'></input>
+    </view>
+    <view class='line'></view>
+    <view>
+      <text>内容：</text>
+      <textarea placeholder='content' name='content' maxlength='240'></textarea>
+    </view>
+    <view class='line'></view>
+    <view>
+      <radio-group class="radio-group" bindchange="radioChange" name='permision'>
+        <label class="radio" wx:for="{{items}}">
+          <radio value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+        </label>
+      </radio-group>
+    </view>
+    <view class='container'>
+      <button type='primary' form-type='submit'>添加心愿</button>
+    </view>
+    </form>
+</view>

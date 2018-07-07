@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    list:[],
     nodesb: [{
       name: 'div',
       attrs: {
@@ -59,6 +60,30 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    var that = this;
+    wx.request({
+      url: 'http://localhost:8080/PublicWish/', //请求的URL地址
+      method: "GET", //请求方式
+      data: {},  //是否有数据传到服务器
+      success: function (res) {
+        var listData = res.data.publicWishList;
+        console.log(listData)
+        if (listData == null) {
+          var toastText = "返回数据失败" + res.data.errMsg;
+          wx.showToast({
+            title: toastText,
+            icon: "",
+            duration: 2000
+          });
+        }
+        else {
+          that.setData({
+            list: listData
+          })
+        }
+      }
+    })
+      //console.log(list)  
   
   },
 

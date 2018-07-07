@@ -5,41 +5,21 @@ Page({
    * 页面的初始数据
    */
   data: {
-    nodesb: [{
-      name: 'div',
-      attrs: {
-        class: 'div_class',
-        style: 'line-height: 0px;color:white;font-size:30pt;'
-      },
-      children: [{
-        type: 'text',
-        text: '我的收藏'
-      }]
-    }],
-    nodes: [{
-      name: 'div',
-      attrs: {
-        class: 'div_class',
-        style: 'line-height: 20px;color:red;font-size:20pt;'
-      },
-      children: [{
-        type: 'text',
-        text: '标题'
-      }]
-    }],
-    nodesa: [{
-      name: 'div',
-      attrs: {
-        class: 'div_class',
-        style: 'line-height: 15px;color:gold;font-size:15pt;'
-      },
-      children: [{
-        type: 'text',
-        text: '作者'
-      }]
-    }]
+    list:[],
+    col:[],
   },
+  colloct:function(e){
+    console.log(e.currentTarget.dataset)
+    //console.log(e)
+    var that=this
 
+    that.setData({
+      col: e.currentTarget.dataset
+    });
+    wx.navigateTo({
+      url: '../mycl/mycl',
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载
@@ -59,7 +39,29 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    var that = this;
+    wx.request({
+      url: 'http://localhost:8080/reCollection/', //请求的URL地址
+      method: "GET", //请求方式
+      data: {}, //是否有数据传到服务器
+      success: function (res) {
+        //console.log(res.data);
+        var listData = res.data.myCollectionList;
+        //console.log(listData)
+        if (listData == null) {
+          var toastText = "返回数据失败" + res.data.errMsg;
+          wx.showToast({
+            title: toastText,
+            icon: "",
+            duration: 2000
+          });
+        } else {
+          that.setData({
+            list: listData
+          })
+        }
+      }
+    })
   },
 
   /**

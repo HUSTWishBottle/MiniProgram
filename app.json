@@ -7,7 +7,9 @@
     "pages/wishSea/wishSea",
     "pages/signup/signup",
     "pages/tree/tree",
-    "pages/collocation/collocation"
+    "pages/collocation/collocation",
+    "pages/addwish/addwish",
+    "pages/mycl/mycl"
   ],
   "window":{
     "backgroundTextStyle": "light",

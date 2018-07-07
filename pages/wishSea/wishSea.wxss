@@ -3,14 +3,33 @@
   margin-top: 15px;
 }
 
+.row{
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
 .wishlist{
   margin-left: 15px;
   margin-right: 15px;
+  margin:15rpx;
+  width:92%;
+  padding: 7rpx;
+  border:5rpx solid white;
 }
-.gainsboro{
-    background-color: gainsboro;
+.box{
+    margin:15rpx;
+  width:92%;
+  padding: 7rpx;
+  border:5rpx solid yellowgreen;
 }
 .link{
   color: grey;
   display: inline-table;
 }
+.line {  
+  width: 100%;  
+  height: 1px;  
+  background-color: black;  
+  margin-top: 1px;  
+} 
