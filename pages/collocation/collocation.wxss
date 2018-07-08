@@ -16,7 +16,7 @@
     background-color: gainsboro;
 }
 .link{
-  color: grey;
+  color: blue;
   display: inline-table;
 }
 
@@ -36,3 +36,23 @@
 .a{
   background-color: azure;
 }
+.chioce-list-hide {
+  display: none !important;
+}
+.chioce-list-show {
+  top: 80rpx;
+  animation: slide 500ms;
+}
+.filter-list {
+  margin-top: 2rpx;
+  position: absolute;
+  top: 80rpx;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: -1;
+  font-size: 14px;
+  border-bottom: 1rpx solid #ddd;
+}
+
+

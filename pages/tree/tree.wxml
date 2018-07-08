@@ -4,12 +4,11 @@
     <rich-text nodes="{{nodesa}}"></rich-text>
   </view>
 
-  <view class='line'></view>
 
   <block wx:for="{{list}}">
     <view class='line'></view>
+    <view class='space'></view>
     <view class="wishlist">
-      <view class='space'></view>
       <view>
         <rich-text style='line-height: 20px;color:red;font-size:20pt;'>标题：{{item.title}}</rich-text>
       </view>
@@ -35,8 +34,9 @@
         <text decode='{{true}}'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
         <button size='mini' class='delete-btn' bindtap='deleteWish' data-wishID='{{item.wishID}}' data-title='{{item.title}}' hover-class='d_btn_hover'>删除</button>
       </view>
-    </view>
+      </view>
   </block>
+
   <view class="round-click">
     <navigator url='/pages/addwish/addwish'>添加心愿</navigator>
   </view>

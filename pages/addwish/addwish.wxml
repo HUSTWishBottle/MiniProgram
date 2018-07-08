@@ -1,12 +1,20 @@
-<view>
+<view style="background-image: url('../../images/background13.jpg')">
   <form bindsubmit='frmAddwish'>
     <view>
-      <text>标题：</text>
+      <view class='space'></view>
+      <view>
+        <rich-text style='line-height: 20px;color:red;font-size:20pt;'>标题：</rich-text>
+      </view>
+      <view class='space'></view>
       <input type='text' name='title' placeholder='title'></input>
     </view>
     <view class='line'></view>
     <view>
-      <text>内容：</text>
+      <view class='space'></view>
+      <view>
+        <rich-text style='line-height: 20px;color:red;font-size:20pt;'>内容：</rich-text>
+      </view>
+      <view class='space'></view>
       <textarea placeholder='content' name='content' maxlength='240'></textarea>
     </view>
     <view class='line'></view>

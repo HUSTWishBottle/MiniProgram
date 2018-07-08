@@ -1,22 +1,29 @@
-<scroll-view  > 
-  <view class='a' bindtap='colloct'>
+<scroll-view style="background-image: url('../../images/background9.jpg')">
+  <view>
     <view class='space'></view>
     <view class='row'>
-      <text>标题</text>
+      <view>
+        <rich-text style='line-height: 20px;color:red;font-size:20pt;'>标题</rich-text>
+      </view>
       <text decode='{{true}}'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
-      <text>作者</text>
+      <view>
+        <rich-text style='line-height: 20px;color:red;font-size:20pt;'>作者</rich-text>
+      </view>
     </view>
     <view class='line'></view>
   </view>
+
+
+
   <block wx:for="{{list}}">
-  <view class='a' bindtap='colloct' data-collection='{{item}}'>
     <view class='space'></view>
     <view class='row'>
-      <text >{{item.wish.title}}</text>
-      <text decode='{{true}}'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
-      <text>{{item.wish.accountInfo.nikeName}}</text>
+      <navigator class='link' url='../mycl/mycl?collectionid={{item.collectionID}}'>
+        <text>{{item.wish.title}}</text>
+        <text decode='{{true}}'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
+        <text>{{item.wish.accountInfo.nikeName}}</text>
+      </navigator>
     </view>
     <view class='line'></view>
-  </view>
   </block>
 </scroll-view>

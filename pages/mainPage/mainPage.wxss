@@ -17,8 +17,9 @@
 .space{
   margin-top: 20px;
 }
-.cent{
-  margin-left: 15px;
-  margin-right: :15px;
+
+.bo{
+  margin-left: 20px;
+  margin-right: 20px;
 }
 

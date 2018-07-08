@@ -16,9 +16,9 @@
       </view>
     </view>
     <view class='space'></view>
-    <view class='cent'>
+    <view class='bo'>
       <view class='row'>
-        <text>生日：</text>
+        <text>邮箱：</text>
         <text name="emai">{{item.email}}</text>
       </view>
       <view>

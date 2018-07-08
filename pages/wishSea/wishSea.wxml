@@ -6,36 +6,58 @@
   <view class='space'></view>
 
   <block wx:for="{{list}}">
+    <view class='space'></view>
     <view class="wishlist">
       <view class='space'></view>
-      <view >
-        <rich-text style='line-height: 20px;color:red;font-size:20pt;'>标题：{{item.title}}</rich-text>
+      <view>
+        <rich-text style='line-height: 20px;color:red;font-size:20pt;'>标题：{{item.wish.title}}</rich-text>
       </view>
       <view class='space'></view>
       <view>
-        <rich-text style='line-height: 15px;color:gold;font-size:15pt;'>作者：{{item.accountInfo.nikeName}}</rich-text> 
+        <rich-text style='line-height: 15px;color:gold;font-size:15pt;'>作者：{{item.wish.accountInfo.nikeName}}</rich-text>
       </view>
       <view class='space'></view>
-
       <view>
-        <rich-text style='line-height: 15px;color:green;font-size:15pt;'>内容：</rich-text> 
+        <rich-text style='line-height: 15px;color:green;font-size:15pt;'>内容：</rich-text>
       </view>
       <view class='box'>
-        <textarea maxlength='240' style='height:3' value='{{item.content}}'></textarea>
+        <textarea maxlength='240' style='height:3' value='{{item.wish.content}}'></textarea>
       </view>
       <view class='space'></view>
       <view>
-        <button style='background-color:{{color}}' size='mini' bindtap='dianzan'>点赞</button>
-        <button style='background-color:{{colors}}' size='mini' bindtap='shoucang'>收藏</button>
-        <!--button size='mini' >评论</button-->
-        <button size='mini' bindtap="choiceItem" data-item="3" data-wishID='{{item.wishID}}' class="chioce-item chioce-item-last" hover-class="click-once-opaque">评论 </button>
-        <view class="filter-list{{!chioceFilter?' chioce-list-hide':' chioce-list-show'}}">
-          <view wx:for="{{commentList}}" data-index="{{index}}" class="filter-item">{{item.accountInfo.nikeName}}
-            <text>评论：</text>{{item.cmcontent}}
+        <button size='mini' bindtap='good' data-index='{{index}}' data-list='{{list}}' data-hasGood='{{item.hasGood}}' data-wishID='{{item.wish.wishID}}' style="background-color:{{item.hasGood? good:nogood}}">点赞 {{item.wish.goodNum}}
+        </button>
 
+        <button size='mini' bindtap='collection' data-index='{{index}}' data-list='{{list}}' data-wishID='{{item.wish.wishID}}' style='background-color:{{item.hasCollection? collection:nocollection}}'>收藏 {{item.wish.collectionNum}}</button>
+
+        <button size='mini' bindtap="comment" data-index='{{index}}' data-list='{{list}}' data-wishID='{{item.wish.wishID}}' data-isshow='{{item.show}}' style="background-color:{{item.show? show:noshow}}">评论 </button>
+        <!--下拉框-->
+
+        <view hidden='{{!item.show}}'>
+          <view wx:for="{{commentList}}" wx:for-item='cell'>
+            <view>
+              <text>{{cell.accountInfo.nikeName}}评论：</text>
+            </view>
+            <view class='boxa'>
+              <textarea style='height:3.3em' value='{{cell.cmcontent}}'></textarea>
+            </view>
+            
+            <wxs module="showTime" src="../../utils/showTime.wxs"></wxs>
+            <text>评论时间：{{showTime.timetoStr(cell.cmtime)}}</text>
+            <view class='line'></view>
           </view>
-          <view class="filter-footer">
-            <button catchtap="filterButtonClick" class="button-submit" type="primary" size="mini">确定</button>
+          <view>
+
+            <form bindsubmit="addcomment" data-list='{{list}}' data-index='{{index}}'>
+              <view>
+                <rich-text style='line-height: 15px;color:green;font-size:15pt;'>评论：</rich-text>
+              </view>
+              <view class='box'>
+                <textarea placeholder='写下你的评论！' name='CMContent' maxlength='240'></textarea>
+              </view>
+             
+              <button type='primary' form-type='submit' size="mini">发表</button>
+            </form>
           </view>
         </view>
       </view>

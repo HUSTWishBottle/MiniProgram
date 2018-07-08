@@ -8,18 +8,6 @@ Page({
     list:[],
     col:[],
   },
-  colloct:function(e){
-    console.log(e.currentTarget.dataset)
-    //console.log(e)
-    var that=this
-
-    that.setData({
-      col: e.currentTarget.dataset
-    });
-    wx.navigateTo({
-      url: '../mycl/mycl',
-    })
-  },
 
   /**
    * 生命周期函数--监听页面加载
@@ -47,7 +35,7 @@ Page({
       success: function (res) {
         //console.log(res.data);
         var listData = res.data.myCollectionList;
-        //console.log(listData)
+        console.log(listData)
         if (listData == null) {
           var toastText = "返回数据失败" + res.data.errMsg;
           wx.showToast({

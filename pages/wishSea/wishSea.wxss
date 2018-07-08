@@ -24,6 +24,12 @@
   border:5rpx solid yellowgreen;
 }
 
+.boxa{
+  margin:15rpx;
+  width:92%;
+  padding: 7rpx;
+  border:3rpx solid gray;
+}
 
 .link{
   color: grey;
@@ -83,7 +89,11 @@
   display: flex;
   justify-content: space-between;
 }
-
-.btn-dianzan{
-  
+.good {
+  border: 1rpx solid #ddd !important;
+  color: "yellow"!important;
+}
+.nogood{
+  border: 1rpx solid #ddd !important;
+  color: #666 !important;
 }
