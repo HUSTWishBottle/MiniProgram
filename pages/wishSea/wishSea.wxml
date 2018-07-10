@@ -10,11 +10,11 @@
     <view class="wishlist">
       <view class='space'></view>
       <view>
-        <rich-text style='line-height: 20px;color:red;font-size:20pt;'>标题：{{item.wish.title}}</rich-text>
+        <rich-text style='line-height: 30px;color:red;font-size:20pt;'>标题：{{item.wish.title}}</rich-text>
       </view>
       <view class='space'></view>
       <view>
-        <rich-text style='line-height: 15px;color:gold;font-size:15pt;'>作者：{{item.wish.accountInfo.nikeName}}</rich-text>
+        <rich-text style='line-height: 20px;color:gold;font-size:15pt;'>作者：{{item.wish.accountInfo.nikeName}}</rich-text>
       </view>
       <view class='space'></view>
       <view>
@@ -50,7 +50,7 @@
 
             <form bindsubmit="addcomment" data-list='{{list}}' data-index='{{index}}'>
               <view>
-                <rich-text style='line-height: 15px;color:green;font-size:15pt;'>评论：</rich-text>
+                <rich-text style='line-height: 20px;color:green;font-size:15pt;'>评论：</rich-text>
               </view>
               <view class='box'>
                 <textarea placeholder='写下你的评论！' name='CMContent' maxlength='240'></textarea>

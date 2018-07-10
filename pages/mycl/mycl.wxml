@@ -4,7 +4,7 @@
     <view>
       <view>
         <view class='space'></view>
-        <rich-text style='line-height: 20px;color:red;font-size:20pt;'>标题：{{item.title}}</rich-text>
+        <rich-text style='line-height: 30px;color:red;font-size:20pt;'>标题：{{item.title}}</rich-text>
         <view class='space'></view>
       </view>
     </view>
@@ -13,7 +13,7 @@
     <view>
       <view>
         <view class='space'></view>
-        <rich-text style='line-height: 15px;color:yellow;font-size:15pt;'>作者：{{item.accountInfo.nikeName}}</rich-text>
+        <rich-text style='line-height: 20px;color:yellow;font-size:15pt;'>作者：{{item.accountInfo.nikeName}}</rich-text>
         <view class='space'></view>
       </view>
 

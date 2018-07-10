@@ -9,7 +9,7 @@
     <view class='space'></view>
     <view class="wishlist">
       <view>
-        <rich-text style='line-height: 20px;color:red;font-size:20pt;'>标题：{{item.title}}</rich-text>
+        <rich-text style='line-height: 30px;color:red;font-size:20pt;'>标题：{{item.title}}</rich-text>
       </view>
 
       <view class='space'></view>
