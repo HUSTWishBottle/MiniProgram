@@ -19,7 +19,7 @@ Page({
       name: 'div',
       attrs: {
         class: 'div_class',
-        style: 'line-height: 30px;color:white;font-size:30pt;'
+        style: 'line-height: 30px;color:sandybrown;font-size:30pt;'
       },
       children: [{
         type: 'text',

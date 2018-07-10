@@ -15,14 +15,9 @@
   margin:15rpx;
   width:92%;
   padding: 7rpx;
-  border:5rpx solid white;
+  border:5rpx solid sandybrown;
 }
-.box{
-  margin:15rpx;
-  width:92%;
-  padding: 7rpx;
-  border:5rpx solid yellowgreen;
-}
+
 
 .boxa{
   margin:15rpx;

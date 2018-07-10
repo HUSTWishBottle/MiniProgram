@@ -1,5 +1,5 @@
 <!--个人收藏-->
-<scroll-view style="background-image: url('../../images/background11.jpg')" class='link'>
+<scroll-view style="background-image: url('../../images/background8.jpg')">
   <block wx:for="{{wish}}">
     <view>
       <view>
@@ -24,7 +24,10 @@
         <view class='space'></view>
         <rich-text style='line-height: 15px;color:green;font-size:15pt;'>内容：</rich-text>
       </view>
-      <textarea maxlength='240'>{{item.content}}</textarea>
+      <view view class='box'>
+        <textarea maxlength='240' style='height:9.9em' value='{{item.content}}'></textarea>
+      </view>
+      
     </view>
     <view class='line'></view>
     <view>

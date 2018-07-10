@@ -4,7 +4,6 @@
     <rich-text nodes="{{nodesa}}"></rich-text>
   </view>
 
-
   <block wx:for="{{list}}">
     <view class='line'></view>
     <view class='space'></view>
@@ -16,9 +15,10 @@
       <view class='space'></view>
       <view>
         <rich-text style='line-height: 15px;color:green;font-size:15pt;'>内容：</rich-text>
+        <view class='space'></view>
       </view>
-      <view class='box'>
-        <textarea maxlength='240' style='height:3' value='{{item.content}}'></textarea><!--心愿内容-->
+      <view>
+        <textarea maxlength='240' style='border:5rpx solid yellowgreen;width:100%' value='{{item.content}}'></textarea><!--心愿内容-->
       </view>
       <view class='space'></view>
       <view>

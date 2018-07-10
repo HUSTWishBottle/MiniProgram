@@ -21,3 +21,10 @@
   padding: 7rpx;
   border:3rpx solid gray;
 }
+
+.box{
+  margin:15rpx;
+  width:92%;
+  padding: 7rpx;
+  border:5rpx solid yellowgreen;
+}

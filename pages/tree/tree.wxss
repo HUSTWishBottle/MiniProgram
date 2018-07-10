@@ -53,12 +53,7 @@
   align-items: center;
   margin-bottom: 0.8rem;
 }
-.box{
-  margin:15rpx;
-  width:92%;
-  padding: 7rpx;
-  border:5rpx solid yellowgreen;
-}
+
 
 .line {  
   width: 100%;  
@@ -66,3 +61,6 @@
   background-color: blue;  
   margin-top: 1px;  
 } 
+
+
+

@@ -20,8 +20,8 @@
       <view>
         <rich-text style='line-height: 15px;color:green;font-size:15pt;'>内容：</rich-text>
       </view>
-      <view class='box'>
-        <textarea maxlength='240' style='height:3' value='{{item.wish.content}}'></textarea>
+      <view>
+        <textarea maxlength='240' style='border:5rpx solid yellowgreen;width:99%' value='{{item.wish.content}}'></textarea>
       </view>
       <view class='space'></view>
       <view>
