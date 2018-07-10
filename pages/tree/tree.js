@@ -1,4 +1,4 @@
-// pages/wishSea/wishSea.js
+// 树洞页面
 var util = require('../../utils/util.js');  
 Page({
 
@@ -7,17 +7,7 @@ Page({
    */
   data: {
     list: [],
-    nodes: [{
-      name: 'div',
-      attrs: {
-        class: 'div_class',
-        style: 'line-height: 20px;color:red;font-size:20pt;'
-      },
-      children: [{
-        type: 'text',
-        text: '标题:'
-      }]
-    }],
+    //显示树洞页面标题“我的心愿”
     nodesa: [{
       name: 'div',
       attrs: {
@@ -42,7 +32,7 @@ Page({
       cancelColor: 'skyblue', //取消文字的颜色
       confirmText: "是", //默认是“确定”
       success: function(sm) {
-        wx.request({
+        wx.request({//发送删除请求
           url: 'http://localhost:8080/weChatDeleteWish/' + e.target.dataset.wishid,
           data: {},
           method: "GET",

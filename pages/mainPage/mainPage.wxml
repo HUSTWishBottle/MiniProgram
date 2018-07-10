@@ -1,3 +1,4 @@
+<!--个人主页-->
 <scroll-view style="background-image: url('../../images/background7.jpeg')">
   <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
     <block wx:for="{{imgUrls}}">

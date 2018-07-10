@@ -1,4 +1,4 @@
-<!--pages/signup/signup.wxml-->
+<!--注册界面-->
 <view class='container' style="background-image: url('../../images/background2.jpg')">
   <form bindsubmit='signupSubmit'>
     <view class='space'></view>

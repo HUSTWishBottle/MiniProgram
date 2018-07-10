@@ -1,16 +1,12 @@
-//logs.js
-//登录处理
+//登录界面
 const util = require('../../utils/util.js')
 const self = this
 Page({
   frmSubmit: function (e) {
-    //console.log(e);
     var frmData = e.detail.value;
-    //console.log(frmData.email);
-    // console.log(frmData.ip);
     var ip = "1001.01.10";
     var result = true;
-    wx.request({
+    wx.request({//发送登录请求
       url: 'http://localhost:8080/weChatLogin',
       method: "POST",
       data: JSON.stringify(frmData),//{"email":"Kobe","password":"12345678"}
@@ -40,17 +36,14 @@ Page({
                     },
                     method: 'GET',
                     success: function (r) {
-                      //console.log(r.data);
+                      
                       location = r.data.result.address_component.nation + r.data.result.address_component.province +
-                        r.data.result.address_component.city + r.data.result.address_component.district;
-                      // console.log(location);
-                      //console.log(2);
+                        r.data.result.address_component.city + r.data.result.address_component.district;                      
                       wx.request({
                         url: 'http://localhost:8080/weChataddLog/' + ip + ':' + location,
                         data: {},
                         method: "GET",
                         success: function () {
-                         // console.log(3);
                         }
                       })
                     }
@@ -74,12 +67,14 @@ Page({
       }
     })
   },
+  //点击登录按钮
   mainPage: function () {
     console.log("进入个人主页")
     wx.switchTab({
       url: '../mainPage/mainPage',
     })
   },
+  //点击注册按钮
   signup: function () {
     console.log("进入注册界面")
     wx.navigateTo({

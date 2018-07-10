@@ -17,23 +17,22 @@ Page({
     var that = this;
     var collectionid = options.collectionid;
     //console.log(collectionList)
-    wx.request({
+    wx.request({//发送请求，显示“收藏”内容
       url: 'http://localhost:8080/weChatgetCollection/' + collectionid,
       data: {},
       method: 'GET',
       success: function (r) {
-        //console.log(r.data)
         var re=r.data;
         that.setData({
           wish: re.wish,
           commentsList: re.commentsList,
           myid:collectionid
         });
-        //console.log(collectionList)
-        //console.log(commentsList)
+
       }
     })
   },
+  //取消收藏
   deleteCollection:function(e){
     console.log(e)
     var collectionID=e.currentTarget.dataset.cid
@@ -68,6 +67,7 @@ Page({
                 icon: '',
                 duration: 2000
               });
+              //删除完毕，跳转到“我的收藏”页面
               wx.navigateTo({
                 url: '../collocation/collocation',
               })

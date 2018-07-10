@@ -1,4 +1,4 @@
-//logs.js
+//日志
 const util = require('../../utils/util.js')
 
 Page({

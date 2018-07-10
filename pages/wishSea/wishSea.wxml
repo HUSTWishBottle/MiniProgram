@@ -1,4 +1,4 @@
-<!--pages/wishSea/wishSea.wxml-->
+<!--心愿海界面-->
 <scroll-view style="background-image: url('../../images/background6.jpg')">
   <view class='container'>
     <rich-text nodes="{{nodesb}}"></rich-text>
@@ -27,9 +27,9 @@
       <view>
         <button size='mini' bindtap='good' data-index='{{index}}' data-list='{{list}}' data-hasGood='{{item.hasGood}}' data-wishID='{{item.wish.wishID}}' style="background-color:{{item.hasGood? good:nogood}}">点赞 {{item.wish.goodNum}}
         </button>
-
+        <text decode='{{true}}'>&nbsp;&nbsp;&nbsp;&nbsp;</text>
         <button size='mini' bindtap='collection' data-index='{{index}}' data-list='{{list}}' data-wishID='{{item.wish.wishID}}' style='background-color:{{item.hasCollection? collection:nocollection}}'>收藏 {{item.wish.collectionNum}}</button>
-
+        <text decode='{{true}}'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
         <button size='mini' bindtap="comment" data-index='{{index}}' data-list='{{list}}' data-wishID='{{item.wish.wishID}}' data-isshow='{{item.show}}' style="background-color:{{item.show? show:noshow}}">评论 </button>
         <!--下拉框-->
 
@@ -41,7 +41,7 @@
             <view class='boxa'>
               <textarea style='height:3.3em' value='{{cell.cmcontent}}'></textarea>
             </view>
-            
+            <!--调用utills里的showTime.wxs函数-->
             <wxs module="showTime" src="../../utils/showTime.wxs"></wxs>
             <text>评论时间：{{showTime.timetoStr(cell.cmtime)}}</text>
             <view class='line'></view>

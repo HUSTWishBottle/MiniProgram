@@ -6,25 +6,15 @@ Page({
    */
   data: {
     list: [],
+    //按钮颜色
     good: ["yellow"],
     nogood: ["white"],
-	collection:["yellow"],
+	  collection:["yellow"],
     nocollection: ["white"],
-    color: ["yellow"],
-    colors:[],
-	show: ["yellow"],
+	  show: ["yellow"],
     noshow: ["white"],
     commentList:[],
     chioceFilter: false,
-    filterList: [{ key: 1, value: "周日营业", selected: false }, {
-      key: 2, value: "官方假期营业（香港）", selected: false
-    }, {
-      key: 3, value: "可为儿童接种疫苗", selected: false
-    }, {
-      key: 4, value: "网上付款", selected: false
-    }, {
-      key: 5, value: "到诊所现场付款", selected: false
-    }],
     nodesb: [{
       name: 'div',
       attrs: {
@@ -36,28 +26,6 @@ Page({
         text: '心愿海'
       }]
     }],
-    nodes: [{
-      name: 'div',
-      attrs: {
-        class: 'div_class',
-        style: 'line-height: 20px;color:red;font-size:20pt;'
-      },
-      children: [{
-        type: 'text',
-        text: '标题'
-      }]
-    }],
-    nodesa: [{
-      name: 'div',
-      attrs: {
-        class: 'div_class',
-        style: 'line-height: 15px;color:gold;font-size:15pt;'
-      },
-      children: [{
-        type: 'text',
-        text: '作者'
-      }]
-    }]
   },
   //显示评论
   comment: function(e) {

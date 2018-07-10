@@ -1,3 +1,4 @@
+<!--添加心愿-->
 <view style="background-image: url('../../images/background13.jpg')">
   <form bindsubmit='frmAddwish'>
     <view>
@@ -28,5 +29,5 @@
     <view class='container'>
       <button type='primary' form-type='submit'>添加心愿</button>
     </view>
-    </form>
+  </form>
 </view>

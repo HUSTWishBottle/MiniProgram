@@ -1,4 +1,4 @@
-<!--pages/wishSea/wishSea.wxml-->
+<!--树洞界面-->
 <scroll-view style="background-image: url('../../images/background8.jpg')">
   <view class='container'>
     <rich-text nodes="{{nodesa}}"></rich-text>
@@ -22,6 +22,7 @@
       </view>
       <view class='space'></view>
       <view>
+      <!--添加空格-->
         <text decode='{{true}}'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
         <text decode='{{true}}'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
         <text>时间：</text>

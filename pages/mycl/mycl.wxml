@@ -1,4 +1,4 @@
-<!--pages/mycl/mycl.wxml-->
+<!--个人收藏-->
 <scroll-view style="background-image: url('../../images/background11.jpg')" class='link'>
   <block wx:for="{{wish}}">
     <view>
@@ -31,6 +31,7 @@
       <view class='space'></view>
       <rich-text style='line-height: 15px;color:blue;font-size:15pt;'>发表时间：</rich-text>
       <view class='space'></view>
+      <!--调用utills里的showTime.wxs函数-->
       <wxs module="showTime" src="../../utils/showTime.wxs"></wxs>
            <text>{{showTime.timetoStr(item.relTime)}}</text>
     </view>

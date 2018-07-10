@@ -2,40 +2,33 @@ Page({
   data: {
     list: []
     ,
+    //动态界面图片地址
     imgUrls: [
       '../../images/1.jpg',
       '../../images/2.jpg',
       '../../images/3.jpg'
     ],
-     
+    //自动跳转，5秒延迟 
     indicatorDots: false,
     autoplay: true,
     interval: 5000,
     duration: 1000,
-    nodes: [{
-      name: 'div',
-      attrs: {
-        class: 'div_class',
-        style: 'line-height: 20px; color: red;font-size:20pt;'
-      },
-      children: [{
-        type: 'text',
-        text: '傲视一切'
-      }]
-    }]
   },
+  //点击“退出登录”按钮，回到登录界面
   zhuxiao: function () {
     console.log("注销")
     wx.navigateTo({
       url: '../login/login',
     })
   },
+  //点击“我的收藏”按钮，进入我的收藏页面
   shoucang: function () {
     console.log("进入我的收藏")
     wx.navigateTo({
       url: '../collocation/collocation',
     })
   },
+  //右上角3个点，转发
   onShareAppMessage: function (res) {
     var that = this;
     return {
@@ -51,6 +44,7 @@ Page({
       }
     }
   },
+  //显示个人信息
   onShow:function(){
     var that=this;
     wx.request({

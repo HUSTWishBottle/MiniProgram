@@ -1,3 +1,4 @@
+<!--我的收藏-->
 <scroll-view style="background-image: url('../../images/background9.jpg')">
   <view>
     <view class='space'></view>
