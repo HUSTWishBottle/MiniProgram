@@ -7,7 +7,7 @@
         <rich-text style='line-height: 20px;color:red;font-size:20pt;'>标题：</rich-text>
       </view>
       <view class='space'></view>
-      <input type='text' name='title' placeholder='title'></input>
+      <input type='text' name='title' maxlength='60' placeholder='title'></input>
     </view>
     <view class='line'></view>
     <view>
